@@ -19,16 +19,15 @@ const EditTodo =({todo})=>{
 
     return (
     <Fragment>
-    <button
+    <div
      type="button"
-    
      data-toggle="modal" 
      data-target={`#id${todo.todo_id}`}
      color="blue"
      >
      ✏️
-    </button>
-    <div class="modal" id={`id${todo.todo_id}`}>
+    </div>
+    <div class="modal" id={`id${todo.todo_id}`}  onClick={()=>setDescription(todo.description)}>
       <div class="modal-dialog">
          <div class="modal-content">
     
@@ -60,7 +59,7 @@ const EditTodo =({todo})=>{
               >
                 Edit
               </button>
-              <button type="button" class="btn btn-danger" data-dismiss="modal">
+              <button type="button" class="btn btn-danger" data-dismiss="modal"  onClick={()=>setDescription(todo.description)}>
                 Close
               </button>
               </div>

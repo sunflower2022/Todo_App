@@ -47,13 +47,10 @@ return (
              <td>
                <EditTodo todo={todo} />
              </td>
-             <td>
-               <button 
+             <td onClick={()=>deleteTodo(todo.todo_id)}>
                
-               onClick={()=>deleteTodo(todo.todo_id)}
-               >
                 ❌
-              </button>
+             
             </td>
          </tr> 
       ))}
